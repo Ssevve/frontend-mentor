@@ -13,21 +13,22 @@
   <body>
     <header>
       <img src="images/logo.svg" alt="Huddle">
-      <button class="btn btn--secondary">Try it Free</button>
+      <button class="button-secondary">Try it Free</button>
     </header>
 
     <main>
-      <section>
+      <section class="hero">
         <h1>Build The Community Your Fans Will Love</h1>
-        <p class="hero__text">
+        <p class="hero-text">
           Huddle re-imagines the way we build communities. You have a voice, but
           so does your audience. Create connections with your users as you
           engage in genuine discussion.
         </p>
-        <button class="btn btn--primary">Get Started For Free</button>
+        <button class="button-primary">Get Started For Free</button>
+        <img class="hero-image" src="images/screen-mockups.svg" alt="">
       </section>
 
-      <section>
+      <section class="section-2">
         <div class="col">
           <img src="images/icon-communities.svg" alt="">
           <h3>1.4k+</h3>
@@ -40,7 +41,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="section-3">
         <div class="col">
           <img src="images/illustration-grow-together.svg" alt="">
         </div>
@@ -54,7 +55,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="section-4">
         <div class="col">
           <img src="images/illustration-flowing-conversation.svg" alt="">
         </div>
@@ -68,7 +69,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="section-5">
         <div class="col">
           <img src="images/illustration-your-users.svg" alt="">
         </div>
@@ -82,21 +83,34 @@
         </div>
       </section>
 
-      <section>
+      <section class="section-6">
         <h2>Ready To Build Your Community?</h2>
         <button class="button button-primary">Get Started For Free</button>
       </section>
     </main>
     <footer>
       <div class="col">
-        <img src="images/logo.svg" alt="Huddle">
+        <h4>Newsletter</h4>
+        <p>
+          To receive tips on how to grow your community, sign up to our weekly
+          newsletter. We'll never send you spam or pass on your email address
+        </p>
+        <form>
+          <input type="email">
+          <small class="error">Check your email please</small>
+          <button class="button-primary button-form">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="col">
+        <img class="footer-logo" src="images/logo-white.svg" alt="Huddle">
 
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla
           quam, hendrerit lacinia vestibulum a, ultrices quis sem.
         </p>
 
-        <ul role="list" aria-label="contact">
+        <ul class="contact" role="list" aria-label="contact">
           <li>
             <img src="images/icon-phone.svg" alt="">
             <span>Phone: +1-543-123-4567</span>
@@ -107,7 +121,7 @@
           </li>
         </ul>
 
-        <ul role="list" aria-label="social links">
+        <ul class="social" role="list" aria-label="social links">
           <li>
             <a aria-label="facebook" href="#">
               <img src="images/icon-facebook.svg" alt="">
@@ -124,19 +138,6 @@
             </a>
           </li>
         </ul>
-      </div>
-
-      <div class="col">
-        <h4>Newsletter</h4>
-        <p>
-          To receive tips on how to grow your community, sign up to our weekly
-          newsletter. We'll never send you spam or pass on your email address
-        </p>
-        <form>
-          <input type="email">
-          <p class="error">Check your email please</p>
-          <button class="btn btn--primary btn--form"></button>
-        </form>
       </div>
     </footer>
   </body>
