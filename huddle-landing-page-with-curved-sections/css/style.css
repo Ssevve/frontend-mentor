@@ -44,7 +44,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.8rem, 3vw, 3.2rem);
+  font-size: clamp(1.8rem, 3vw, 40rem);
   margin-top: 8rem;
 }
 
@@ -82,13 +82,14 @@ section img {
 }
 
 p {
-  font-size: clamp(1.4rem, 3vw, 1.6rem);
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
 }
 
 section p {
   line-height: 1.4;
   width: 85%;
   margin: 0 auto;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
 }
 
 footer p {
@@ -155,7 +156,8 @@ ul img {
 
 .col {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
+  justify-content: center;
 }
 
 .button-primary {
@@ -277,6 +279,7 @@ ul img {
 
   section p {
     margin: 0;
+    width: 100%;
   }
 
   footer {
@@ -292,15 +295,64 @@ ul img {
     flex-direction: row;
     justify-content: space-around;
     background-image: url('../images/bg-section-top-desktop-1.svg');
-    padding-bottom: 32rem;
+    padding-bottom: 16rem; /* 32rem */
+  }
+
+  .section-3 .col,
+  .section-4 .col,
+  .section-5 .col {
+    width: 75%;
   }
 
   .section-3,
   .section-4,
   .section-5 {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .section-4 {
+    background-image: url('../images/bg-section-bottom-desktop-1.svg'), url('../images/bg-section-top-desktop-2.svg');
+  }
+
+  .section-6 {
+    background-image: url('../images/bg-section-bottom-desktop-2.svg'), url('../images/bg-footer-top-desktop.svg');
+    padding: 20rem 10rem;
+  }
+}
+
+@media screen and (min-width: 986px) {
+  h2 {
+    margin-top: 0;
+  }
+
+  header {
+    padding: 5rem 10rem;
+  }
+
+  section img {
+    width: 100%;
+  }
+
+  .hero-text {
+    width: 45%;
+  }
+
+  .section-2 img {
+    width: 3.5rem;
+  }
+  
+  .section-6 {
+    padding: 32rem 10rem;
+  }
+
+  .section-3,
+  .section-4,
+  .section-5 {
+    flex-direction: row;
+    justify-content: space-between;
     text-align: left;
     padding: 10rem;
   }
@@ -316,29 +368,9 @@ ul img {
     padding: 30rem 10rem;
   }
 
-  .section-4 {
-    background-image: url('../images/bg-section-bottom-desktop-1.svg'), url('../images/bg-section-top-desktop-2.svg');
-  }
-
-  .section-6 {
-    background-image: url('../images/bg-section-bottom-desktop-2.svg'), url('../images/bg-footer-top-desktop.svg');
-    padding: 20rem 10rem;
-  }
-}
-
-@media screen and (min-width: 986px) {
-  header {
-    padding: 5rem 10rem;
-  }
-
-  .hero-text {
+  .section-3 .col,
+  .section-4 .col,
+  .section-5 .col {
     width: 45%;
-  }
-
-  .section-2 img {
-    width: 3.5rem;
-  }
-  .section-6 {
-    padding: 32rem 10rem;
   }
 }
