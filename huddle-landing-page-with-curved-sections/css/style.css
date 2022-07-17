@@ -351,9 +351,9 @@ input:invalid + .error-message {
 
   .section-2 {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-image: url('../images/bg-section-top-desktop-1.svg');
-    padding-bottom: 16rem; /* 32rem */
+    padding-bottom: 16rem;
   }
 
   .section-3 .col,
