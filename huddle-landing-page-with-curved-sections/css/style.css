@@ -9,26 +9,29 @@
   --clr-body-light: hsl(207, 100%, 98%);
   --clr-body-very-light: hsl(0, 0%, 100%);
   --clr-error: hsl(0, 100%, 63%);
+  --clr-social-hover: hsl(192, 99%, 49%);
 
   /* Backgrounds */
   --clr-primary: hsl(322, 100%, 66%);
   --clr-primary-hover: hsl(321, 100%, 78%);
 
 }
-
+/*************************************************************************/
+/************************** GLOBAL SELECTORS *****************************/
+/************************************************************************/
 * {
   box-sizing: border-box;
-}
-
-img {
-  display: inline-block;
-  width: 100%;
 }
 
 html {
   font-size: 62.5%;
   font-family: var(--ff-body);
   color: var(--clr-body-dark);
+}
+
+img {
+  display: inline-block;
+  width: 100%;
 }
 
 h1,
@@ -60,17 +63,6 @@ h4 {
   margin: 2rem 0  1rem;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2.5rem;
-}
-
-header img {
-  width: clamp(12rem, 18vw, 20rem);
-}
-
 section {
   text-align: center;
   padding: 2.5rem;
@@ -89,13 +81,6 @@ section p {
   font-size: clamp(1.4rem, 3vw, 1.8rem);
 }
 
-footer p {
-  line-height: 1.8;
-  font-weight: 400;
-  font-size: clamp(1.4rem, 3vw, 1.6rem);
-  max-width: 524px;
-}
-
 button {
   border-radius: 100vmax;
   border: 1px solid var(--clr-primary);
@@ -106,48 +91,16 @@ button {
   transition: all 0.1s ease-in-out;
 }
 
+button:hover {
+  border-color: var(--clr-primary-hover);
+}
+
 button:active {
   transform: translateY(1px);
 }
 
 span {
   font-size: clamp(1.35rem, 0.85vw, 1.8rem);
-}
-
-footer {
-  background: hsl(192, 100%, 9%);
-  color: var(--clr-body-very-light);
-  padding: 3rem 2.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 12rem;
-}
-
-form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1.25rem;
-}
-
-input {
-  flex-basis: 100%;
-  border-radius: 5px;
-  padding: 1.5em;
-  border: none;
-  margin-top: 1.5rem;
-  font-size: 1.4rem;
-  border: 2px solid transparent;
-  cursor: pointer;
-}
-
-input:invalid {
-  border-color: var(--clr-error);
-}
-
-input:invalid + .error-message {
-  visibility: visible;
 }
 
 ul {
@@ -159,13 +112,9 @@ ul {
 ul img {
   width: 1.75rem;
 }
-
-.error-message {
-  color: var(--clr-error);
-  font-size: clamp(1.1rem, 0.65vw, 1.3rem);
-  visibility: hidden;
-}
-
+/*************************************************************************/
+/**************************** HELPER CLASSES *****************************/
+/************************************************************************/
 .col {
   display: flex;
   flex-direction: column;
@@ -191,7 +140,6 @@ ul img {
 }
 
 .button-secondary:hover {
-  border-color: var(--clr-primary-hover);
   background: var(--clr-primary-hover);
   color: var(--clr-body-very-light);
 }
@@ -200,7 +148,22 @@ ul img {
   border-radius: 5px;
   padding: 1em 2.5em;
 }
+/*************************************************************************/
+/******************************** HEADER *********************************/
+/************************************************************************/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem;
+}
 
+header img {
+  width: clamp(12rem, 18vw, 20rem);
+}
+/*************************************************************************/
+/****************************** HERO SECTION *****************************/
+/************************************************************************/
 .hero {
   padding: 0 2.5rem;
 }
@@ -214,7 +177,9 @@ ul img {
   margin: 10rem auto 8rem;
   width: 100%;
 }
-
+/*************************************************************************/
+/******************************* SECTION 2 *******************************/
+/************************************************************************/
 .section-2 span {
   color: var(--clr-body-dimmed-light);
 }
@@ -244,15 +209,18 @@ ul img {
   width: 2.5rem;
   margin: 0;
 }
-
-
+/*************************************************************************/
+/******************************* SECTION 3 *******************************/
+/************************************************************************/
 .section-3,
 .section-5 {
   padding-top: 8rem;
   padding-bottom: 8rem;
   background-color: #f6fbff;
 }
-
+/*************************************************************************/
+/******************************* SECTION 4 *******************************/
+/************************************************************************/
 .section-4,
 .section-6 {
   padding-top: 16rem;
@@ -263,11 +231,15 @@ ul img {
   background-position: top center, bottom center;
   padding-bottom: 18rem;
 }
-
+/*************************************************************************/
+/******************************* SECTION 5 *******************************/
+/************************************************************************/
 .section-5 {
   padding-top: 0;
 }
-
+/*************************************************************************/
+/******************************* SECTION 6 *******************************/
+/************************************************************************/
 .section-6 {
   background-image: url('../images/bg-section-bottom-mobile-2.svg'), url('../images/bg-footer-top-mobile.svg');
   background-position: top center, bottom center;
@@ -279,6 +251,56 @@ ul img {
   margin: 0 auto 4rem;
   font-size: clamp(2.2rem, 3vw, 5rem);
   line-height: 1.5;
+}
+/*************************************************************************/
+/********************************* FOOTER ********************************/
+/************************************************************************/
+footer {
+  background: hsl(192, 100%, 9%);
+  color: var(--clr-body-very-light);
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 12rem;
+}
+
+footer p {
+  line-height: 1.8;
+  font-size: clamp(1.4rem, 3vw, 1.6rem);
+  max-width: 524px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+input {
+  flex-basis: 100%;
+  border-radius: 5px;
+  padding: 1.5em;
+  border: none;
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+input:invalid {
+  border-color: var(--clr-error);
+}
+
+.error-message {
+  color: var(--clr-error);
+  font-size: clamp(1.1rem, 0.65vw, 1.3rem);
+  visibility: hidden;
+}
+
+input:invalid + .error-message {
+  visibility: visible;
 }
 
 .footer-logo {
@@ -299,18 +321,27 @@ ul img {
   column-gap: 1.5rem;
 }
 
-@media screen and (min-width: 616px) {
-  header {
-    padding: 2.5rem 10rem;
-  }
+.social a {
+  font-size: clamp(2rem, 2vw, 3rem);
+  color: var(--clr-body-very-light);
+  transition: color 0.1s ease-in-out;
+}
 
+.social a:hover {
+  color: var(--clr-social-hover);
+}
+
+/*************************************************************************/
+/***************************** MEDIA QUERIES *****************************/
+/************************************************************************/
+@media screen and (min-width: 616px) {
   section p {
     margin: 0;
     width: 100%;
   }
-
-  footer {
-    margin-top: -2px;
+  
+  header {
+    padding: 2.5rem 10rem;
   }
 
   .hero {
@@ -357,10 +388,6 @@ ul img {
     align-items: flex-start;
   }
 
-  footer .col {
-    width: 40%;
-  }
-
   form {
     position: relative;
     margin-top: 2rem;
@@ -374,6 +401,10 @@ ul img {
     position: absolute;
     top: -2rem;
     left: 0;
+  }
+
+  footer .col {
+    width: 40%;
   }
 
   .button-form {
@@ -390,25 +421,54 @@ ul img {
     margin-top: 0;
   }
 
-  header {
-    padding: 5rem 10rem;
-  }
-
   section img {
     width: 100%;
   }
 
+  header {
+    padding: 5rem 10rem;
+  }
+
+  .hero-text {
+    width: 45%;
+  }
+
+  .section-2 img {
+    width: 3.5rem;
+  }
+  
+  .section-3,
+  .section-4,
+  .section-5 {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 10rem;
+  }
+
+  .section-3,
+  .section-5 {
+    flex-direction: row-reverse;
+  }
+
+  .section-3 .col,
+  .section-4 .col,
+  .section-5 .col {
+    width: 45%;
+  }
+
+  .section-4,
+  .section-6 {
+    padding: 30rem 10rem;
+  }
+
+  .section-6 {
+    padding: 32rem 10rem;
+  }
+
+
   footer {
     padding: 10rem 10rem 8rem;
-  }
-
-  footer p {
-    width: 90%;
-  }
-
-  small {
-    bottom: -2rem;
-    top: auto;
   }
 
   form {
@@ -423,55 +483,13 @@ ul img {
   }
 
   small {
-    position: absolute;
     bottom: -2rem;
-    left: 0;
-  }
-
-  .hero-text {
-    width: 45%;
-  }
-
-  .section-2 img {
-    width: 3.5rem;
-  }
-  
-  .section-6 {
-    padding: 32rem 10rem;
-  }
-
-  .section-3,
-  .section-4,
-  .section-5 {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-    padding: 10rem;
-  }
-
-  .section-3,
-  .section-5 {
-    flex-direction: row-reverse;
-    margin-top: -1px;
-  }
-
-  .section-4,
-  .section-6 {
-    padding: 30rem 10rem;
-  }
-
-  .section-3 .col,
-  .section-4 .col,
-  .section-5 .col {
-    width: 45%;
+    top: auto;
   }
 
   .social {
     margin-top: 6rem;
-  }
-
-  .social img {
-    width: 2rem;
+    column-gap: 2.25rem;
   }
 }
 
