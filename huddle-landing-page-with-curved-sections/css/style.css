@@ -103,6 +103,11 @@ button {
   font-weight: 600;
   font-family: var(--ff-body);
   cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+button:active {
+  transform: translateY(1px);
 }
 
 span {
@@ -133,6 +138,16 @@ input {
   border: none;
   margin-top: 1.5rem;
   font-size: 1.4rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+input:invalid {
+  border-color: var(--clr-error);
+}
+
+input:invalid + .error-message {
+  visibility: visible;
 }
 
 ul {
@@ -145,9 +160,10 @@ ul img {
   width: 1.75rem;
 }
 
-.error {
+.error-message {
   color: var(--clr-error);
-  font-size: 1.1rem;
+  font-size: clamp(1.1rem, 0.65vw, 1.3rem);
+  visibility: hidden;
 }
 
 .col {
@@ -163,11 +179,21 @@ ul img {
   box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.1);
 }
 
+.button-primary:hover {
+  background: var(--clr-primary-hover);
+}
+
 .button-secondary {
   background: none;
   color: var(--clr-primary);
   font-size: clamp(1rem, 1vw, 1.5rem);
   padding: 1em 2.5em;
+}
+
+.button-secondary:hover {
+  border-color: var(--clr-primary-hover);
+  background: var(--clr-primary-hover);
+  color: var(--clr-body-very-light);
 }
 
 .button-form {
