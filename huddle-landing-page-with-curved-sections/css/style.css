@@ -334,7 +334,7 @@ input:invalid + .error-message {
 /*************************************************************************/
 /***************************** MEDIA QUERIES *****************************/
 /************************************************************************/
-@media screen and (min-width: 616px) {
+@media screen and (min-width: 61.6em) {
   section p {
     margin: 0;
     width: 100%;
@@ -412,7 +412,7 @@ input:invalid + .error-message {
   }
 }
 
-@media screen and (min-width: 986px) {
+@media screen and (min-width: 98.6em) {
   h2 {
     margin-top: 0;
   }
@@ -493,13 +493,13 @@ input:invalid + .error-message {
   }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 140em) {
   .section-2 {
     padding-bottom: 25rem;
   }
 }
 
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: 180em) {
   .section-2 {
     padding-bottom: 30rem;
   }
