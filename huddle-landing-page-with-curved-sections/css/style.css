@@ -38,7 +38,7 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-size: clamp(2.5rem, 2.5vw, 5rem);
   line-height: 1.5;
   margin-top: 10rem;
 }
@@ -55,7 +55,7 @@ h3 {
 }
 
 h4 {
-  font-size: clamp(2rem, 3vw, 2.2rem);
+  font-size: clamp(2rem, 3vw, 2.4rem);
   text-transform: uppercase;
   margin: 2rem 0  1rem;
 }
@@ -81,20 +81,19 @@ section img {
   margin: 0 auto;
 }
 
-p {
-  font-size: clamp(1.4rem, 3vw, 1.8rem);
-}
-
 section p {
   line-height: 1.4;
   width: 85%;
+  max-width: 650px; 
   margin: 0 auto;
   font-size: clamp(1.4rem, 3vw, 1.8rem);
 }
 
 footer p {
   line-height: 1.8;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 3vw, 1.6rem);
+  max-width: 524px;
 }
 
 button {
@@ -107,9 +106,7 @@ button {
 }
 
 span {
-  font-size: clamp(1.35rem, 3vw, 1.5rem);
-  color: var(--clr-body-dimmed-light);
-  font-weight: 600;
+  font-size: clamp(1.35rem, 0.85vw, 1.8rem);
 }
 
 footer {
@@ -132,9 +129,10 @@ form {
 input {
   flex-basis: 100%;
   border-radius: 5px;
-  padding: 1.25rem 1rem;
+  padding: 1.5em;
   border: none;
   margin-top: 1.5rem;
+  font-size: 1.4rem;
 }
 
 ul {
@@ -146,8 +144,6 @@ ul {
 ul img {
   width: 1.75rem;
 }
-
-
 
 .error {
   color: var(--clr-error);
@@ -170,12 +166,13 @@ ul img {
 .button-secondary {
   background: none;
   color: var(--clr-primary);
-  font-size: clamp(1rem, 1vw, 1.3rem);
+  font-size: clamp(1rem, 1vw, 1.5rem);
   padding: 1em 2.5em;
 }
 
 .button-form {
   border-radius: 5px;
+  padding: 1em 2.5em;
 }
 
 .hero {
@@ -184,12 +181,16 @@ ul img {
 
 .hero-text {
   margin: 2rem auto 4rem auto;
-  
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
 }
 
 .hero-image {
   margin: 10rem auto 8rem;
   width: 100%;
+}
+
+.section-2 span {
+  color: var(--clr-body-dimmed-light);
 }
 
 .section-2,
@@ -321,10 +322,45 @@ ul img {
     background-image: url('../images/bg-section-bottom-desktop-2.svg'), url('../images/bg-footer-top-desktop.svg');
     padding: 20rem 10rem;
   }
+
+  footer {
+    padding: 10rem 5rem 8rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  footer .col {
+    width: 40%;
+  }
+
+  form {
+    position: relative;
+    margin-top: 2rem;
+  }
+
+  input {
+    margin: 0;
+  }
+
+  small {
+    position: absolute;
+    top: -2rem;
+    left: 0;
+  }
+
+  .button-form {
+    justify-self: end;
+  }
 }
 
 @media screen and (min-width: 986px) {
   h2 {
+    margin-top: 0;
+  }
+
+  h4 {
     margin-top: 0;
   }
 
@@ -334,6 +370,36 @@ ul img {
 
   section img {
     width: 100%;
+  }
+
+  footer {
+    padding: 10rem 10rem 8rem;
+  }
+
+  footer p {
+    width: 90%;
+  }
+
+  small {
+    bottom: -2rem;
+    top: auto;
+  }
+
+  form {
+    position: relative;
+    flex-wrap: nowrap;
+    gap: 3.5rem;
+    margin-top: 2rem;
+  }
+
+  input {
+    margin: 0;
+  }
+
+  small {
+    position: absolute;
+    bottom: -2rem;
+    left: 0;
   }
 
   .hero-text {
@@ -372,5 +438,29 @@ ul img {
   .section-4 .col,
   .section-5 .col {
     width: 45%;
+  }
+
+  .social {
+    margin-top: 6rem;
+  }
+
+  .social img {
+    width: 2rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .section-2 {
+    padding-bottom: 25rem;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .section-2 {
+    padding-bottom: 30rem;
+  }
+
+  .section-6 {
+    padding-bottom: 40rem;
   }
 }
