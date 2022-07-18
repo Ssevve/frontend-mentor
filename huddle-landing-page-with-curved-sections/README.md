@@ -12,8 +12,8 @@ Form validation is made using an "email" type input and error class is applied t
 
 ## Optimizations
 
-- It would be better to use JavaScript to validate the user input.
-- Less breakpoints
+- Use JavaScript to validate the user input
+- Use less breakpoints
 
 ## Lessons Learned:
 
