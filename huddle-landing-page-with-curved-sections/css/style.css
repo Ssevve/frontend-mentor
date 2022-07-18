@@ -334,7 +334,7 @@ input:invalid + .error-message {
 /*************************************************************************/
 /***************************** MEDIA QUERIES *****************************/
 /************************************************************************/
-@media screen and (min-width: 61.6em) {
+@media screen and (min-width: 38.5em) {
   section p {
     margin: 0;
     width: 100%;
@@ -412,7 +412,7 @@ input:invalid + .error-message {
   }
 }
 
-@media screen and (min-width: 98.6em) {
+@media screen and (min-width: 61.625em) {
   h2 {
     margin-top: 0;
   }
