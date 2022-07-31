@@ -1,0 +1,164 @@
+:root {
+  /* Colors */
+  --clr-primary-100: hsl(238, 22%, 44%);
+  --clr-primary-200: hsl(243, 87%, 12%);
+
+  --clr-accent-100: hsl(221, 100%, 71%);
+  --clr-accent-200: hsl(224, 93%, 58%);
+
+  --clr-accent2-100: hsl(177, 37%, 79%);
+  --clr-accent2-200: hsl(170, 45%, 43%);
+
+  --clr-neutral-100: hsl(240, 75%, 98%);
+  --clr-neutral-200: hsl(0, 0%, 75%);
+
+  --clr-error: #C27A8E;
+  /* Fonts */
+  --ff-heading: 'Raleway', sans-serif;
+  --ff-body: 'Open Sans', sans-serif;
+}
+
+
+/**
+ * General Styling
+ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-body);
+  color: var(--clr-primary-200);
+  line-height: 1.5;
+}
+
+section {
+  text-align: center;
+}
+
+section,
+footer {
+  padding-block: 4rem;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+h2,
+h3 {
+  font-family: var(--ff-heading);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+ }
+
+input {
+  border: 1px solid var(--clr-primary-100);
+  border-radius: 0.2em;
+  padding: 0.8em 1.5em;
+  font-size: 0.8rem;
+  font-family: var(--ff-heading);
+}
+
+input::placeholder {
+  opacity: 0.2;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.8em 1.5em;
+  border-radius: 0.2em;
+  border: none;
+  font-size: 0.8rem;
+  background: var(--clr-accent-200);
+  color: #fff;
+  font-weight: 700;
+  font-family: var(--ff-heading);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.error-message {
+  text-align: left;
+  font-size: 0.75rem;
+  color: var(--clr-error);
+  display: none;
+}
+
+.container {
+  width: 85%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section .container {
+  flex-direction: column;
+}
+
+/**
+ * Header
+ */
+ header {
+  padding-block: 1.5rem;
+ }
+
+.header-logo {
+  width: clamp(5rem, 14vw, 8rem);
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li + li {
+  margin-left: clamp(1.5em, 3vw, 2em);
+}
+
+.nav-list a {
+  text-decoration: none;
+  
+  font-size: clamp(0.8rem, 3vw, 1rem);
+}
+
+/**
+ * Hero Section
+ */
+ h1 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+ }
+
+ .hero-section p {
+  font-size: clamp(0.9rem, 3vw, 1rem);
+ }
+
