@@ -12,6 +12,8 @@
   --clr-neutral-100: hsl(240,75%,98.4%);
   --clr-neutral-200: hsl(0, 0%, 75%);
 
+  --clr-light: hsl(0, 0%, 100%);
+
   --clr-error: hsl(343, 37%, 62%);
   /* Fonts */
   --ff-heading: 'Raleway', sans-serif;
@@ -51,6 +53,11 @@ h3 {
 h2,
 h3 {
   font-family: var(--ff-heading);
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+
+cite {
+  font-style: normal;
 }
 
 p {
@@ -59,6 +66,7 @@ p {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 li {
@@ -99,7 +107,7 @@ button {
   border: none;
   font-size: 0.8rem;
   background: var(--clr-accent-200);
-  color: #fff;
+  color: var(--clr-light);
   font-weight: 700;
   font-family: var(--ff-heading);
 }
@@ -162,13 +170,16 @@ section .container {
 }
 
 .nav-list a {
-  text-decoration: none;
   font-size: clamp(0.8rem, 3vw, 1rem);
 }
 
 /**
  * Hero Section
  */
+.hero-section {
+  padding-bottom: clamp(4rem, 12vw, 8rem);
+}
+
  h1 {
   font-size: clamp(1.5rem, 3vw, 2rem);
  }
@@ -182,8 +193,9 @@ section .container {
  */
 .stay-productive-section {
   position: relative;
-  margin-top: 3.5rem;
+  margin-top: 3.7rem;
   background: var(--clr-neutral-100);
+  text-align: left;
 }
 
 .stay-productive-section::after {
@@ -192,9 +204,87 @@ section .container {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: bottom center;
-  height: 5rem;
+  height: 10rem;
   width: 100%;
   position: absolute;
-  top: -5%;
+  top: -9rem;
   left: 0;
+}
+
+/**
+ * Stay Productive Section
+ */
+.stay-productive-section h2 {
+  text-align: center;
+  margin-top: 5.5rem;
+}
+
+.stay-productive-section p {
+  font-size: 0.85rem;
+}
+
+.stay-productive-section p + p {
+  margin-top: 1.25rem;
+}
+
+.stay-productive-section a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  margin: 2.2rem auto 0 auto;
+  padding-bottom: 0.25rem;
+  /* margin-inline: auto; */
+  text-align: center;
+  color: var(--clr-accent2-200);
+  font-size: 0.8rem;
+  position: relative;
+  border-bottom: 1px solid var(--clr-accent2-200);
+}
+
+.stay-productive-section a img {
+  margin-left: 0.4em;
+}
+
+.testimonial {
+  box-sizing: border-box;
+  margin: 2.5rem auto 0 auto;
+  background: var(--clr-light);
+  padding: 1.2rem 1rem 1.2rem 1.7rem;
+  width: 88%;
+  border-radius: 0.3em;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+}
+
+.testimonial p {
+  font-size: clamp(0.67rem, 3vw, 1rem);
+  margin-top: 0.6rem;
+}
+
+.testimonial footer {
+  padding: 0;
+  display: flex;
+}
+
+.author-photo {
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 1rem;
+}
+
+.author-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.author {
+  font-weight: bold;
+  margin: 1rem  0 0 0.5rem;
+  font-size: clamp(0.6rem, 2vw, 1rem);
+}
+
+.company {
+  margin-left: 0.5rem;
+  font-size: clamp(0.1rem, 2vw, 1rem);
 }
