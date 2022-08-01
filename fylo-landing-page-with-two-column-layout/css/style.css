@@ -96,6 +96,15 @@ button {
   font-family: var(--ff-heading);
 }
 
+.sr-only {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  }
+
 .form-group {
   display: flex;
   flex-direction: column;
@@ -147,7 +156,6 @@ section .container {
 
 .nav-list a {
   text-decoration: none;
-  
   font-size: clamp(0.8rem, 3vw, 1rem);
 }
 

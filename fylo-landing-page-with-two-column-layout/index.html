@@ -26,7 +26,9 @@
         </nav>
       </div>
     </header>
-    
+    margin-top: 2.5rem;
+    width: clamp(4.6rem, 14vw, 8rem);
+    margin-left: clamp(1.3em, 3vw, 2em);
     <main>
       <section class="hero-section">
         <div class="container">
@@ -40,7 +42,8 @@
               family, and co-workers.</p>
               <form>
                 <div class="form-group">
-                  <input type="email" placeholder="Enter your email...">
+                  <label class="sr-only" for="email-hero">Email:</label>
+                  <input id="email-hero" type="email" placeholder="Enter your email...">
                   <span class="error-message" aria-live="polite">Please check your email</span>
                 </div>
                 <button>Get Started</button>
@@ -93,7 +96,11 @@
               If you have any questions, our support team would be happy to help you.</p>
           </div>
           <form>
-            <input type="email" placeholder="email@example.com">
+            <div class="form-group">
+              <label class="sr-only" for="email-early-access">Email:</label>
+              <input id="email-early-access" type="email" placeholder="email@example.com">
+              <span class="error-message" aria-live="polite">Please check your email</span>
+            </div>
             <button>Get Started For Free</button>
           </form>
         </div>
