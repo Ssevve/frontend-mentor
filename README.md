@@ -8,4 +8,4 @@ Sharpening HTML and CSS skills by building great projects.
 
 ## Lessons Learned:
 
-Not everything is as simple as it looks. Learning something new about semantic HTML, layouts and accessibility with each project.
+Not everything is as simple as it looks. With each project, I learn something new about semantic HTML, layouts, and accessibility.
