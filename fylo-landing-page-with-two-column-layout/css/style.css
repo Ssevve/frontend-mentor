@@ -61,6 +61,14 @@ a {
   color: inherit;
 }
 
+li {
+  list-style-type: none;
+}
+
+li::before {
+  content: "\200B"; /* add zero-width space to return list semantics for screen readers */
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -142,7 +150,6 @@ section .container {
 }
 
 .nav-list {
-  list-style-type: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
