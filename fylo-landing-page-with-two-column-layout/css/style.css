@@ -194,6 +194,7 @@ section .container {
 .stay-productive-section {
   position: relative;
   margin-top: 3.7rem;
+  padding-bottom: 5rem;
   background: var(--clr-neutral-100);
   text-align: left;
 }
@@ -287,4 +288,56 @@ section .container {
 .company {
   margin-left: 0.5rem;
   font-size: clamp(0.1rem, 2vw, 1rem);
+}
+
+/**
+ * Early Access Section
+ */
+.early-access-section {
+  background: var(--clr-primary-100);
+  color:hsl(0, 0%, 100%);
+  padding-block: 1rem 4.5rem;
+  
+}
+
+.early-access-section h2 {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  margin-bottom: 1rem;
+}
+
+.early-access-section p {
+  font-size: clamp(0.85rem, 3vw, 1rem);
+  width: 85%;
+  margin-inline: auto;
+}
+
+.early-access-section form {
+  margin-top: 1.5rem;
+  width: 75%;
+}
+
+.early-access-section input,
+.early-access-section button {
+  padding-block: 0.5rem;
+  padding-inline: clamp(0.5rem, 3vw, 0.7rem);
+  font-size: 0.7rem;
+}
+
+.early-access-section button {
+  margin-top: 0.5rem;
+}
+
+.early-access-section input {
+  margin-top: 0.1rem;
+}
+
+.early-access-section input::placeholder {
+  opacity: 0.8;
+}
+
+/**
+ * Main Footer
+ */
+.main-footer {
+  background:var(--clr-primary-200);
 }
