@@ -115,7 +115,7 @@ input::placeholder {
 button {
   margin-top: 1rem;
   padding: 0.8em 1.5em;
-  border: none;
+  border: 1px solid var(--clr-accent-200);
   font-size: 0.8rem;
   background: var(--clr-accent-200);
   color: var(--clr-light);
