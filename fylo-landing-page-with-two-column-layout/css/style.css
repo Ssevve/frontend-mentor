@@ -388,9 +388,20 @@ section .container {
 }
 
 .social-links {
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   width: 100%;
-  /* column-gap: 1.5rem; */
+  column-gap: 0.5rem;
   justify-content: center;
   align-items: center;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 1.8rem;
+  height: 1.8rem;
+  font-size: 0.9rem;
 }
