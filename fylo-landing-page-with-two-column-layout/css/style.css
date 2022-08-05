@@ -46,15 +46,10 @@ footer {
 h1,
 h2,
 h3 {
+  font-family: var(--ff-heading);
+  font-size: clamp(1rem, 3vw, 2.5rem);
   margin-top: 2.5rem;
   margin-bottom: 1.5rem;
-}
-
-h1,
-h2,
-h3 {
-  font-family: var(--ff-heading);
-  font-size: clamp(1rem, 3vw, 2rem);
 }
 
 h1 {
@@ -152,15 +147,6 @@ button {
   display: none;
 }
 
-/* .social-icon {
-  color: var(--clr-light);
-  border-radius: 50%;
-  border: 1px solid currentColor;
-  width: 1rem;
-  height: 1rem;
-  padding: 0.3rem;
-} */
-
 .container {
   width: 85%;
   max-width: 1600px;
@@ -217,7 +203,6 @@ section .container {
   margin-top: 3.7rem;
   padding-bottom: 5rem;
   background: var(--clr-neutral-100);
-  text-align: left;
 }
 
 .stay-productive-section::after {
@@ -233,16 +218,13 @@ section .container {
   left: 0;
 }
 
-/**
- * Stay Productive Section
- */
 .stay-productive-section h2 {
-  text-align: center;
   margin-top: 5.5rem;
 }
 
 .stay-productive-section p {
-  font-size: 0.85rem;
+  font-size: clamp(0.85rem, 3vw, 1rem);
+  text-align: left;
 }
 
 .stay-productive-section p + p {
@@ -256,11 +238,8 @@ section .container {
   width: max-content;
   margin: 2.2rem auto 0 auto;
   padding-bottom: 0.25rem;
-  /* margin-inline: auto; */
-  text-align: center;
   color: var(--clr-accent2-200);
-  font-size: 0.8rem;
-  position: relative;
+  font-size: clamp(0.8rem, 3vw, 1rem);
   border-bottom: 1px solid var(--clr-accent2-200);
 }
 
@@ -303,12 +282,12 @@ section .container {
 .author {
   font-weight: bold;
   margin: 1rem  0 0 0.5rem;
-  font-size: clamp(0.6rem, 2vw, 1rem);
+  font-size: clamp(0.6rem, 2vw, 0.75rem);
 }
 
 .company {
   margin-left: 0.5rem;
-  font-size: clamp(0.1rem, 2vw, 1rem);
+  font-size: clamp(0.1rem, 2vw, 0.5rem);
 }
 
 /**
@@ -416,12 +395,21 @@ section .container {
     text-align: left;
   }
 
+  header {
+    padding-top: 4rem;
+  }
+
+  h1 {
+    margin-top: -2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
   .container {
     width: 90%;
   }
 
-  header {
-    padding-top: 4rem;
+  .hero-section {
+    padding-bottom: 12rem;
   }
 
   .hero-section .container {
@@ -430,11 +418,6 @@ section .container {
 
   .hero-section .container > div {
     flex: 1;
-  }
-
-  h1 {
-    margin-top: -2.5rem;
-    margin-bottom: 0.5rem;
   }
 
   .hero-section p {
@@ -464,7 +447,62 @@ section .container {
     flex: 0.33;
   }
 
+  .stay-productive-section {
+    padding-bottom: 6.25rem;
+  }
+
+  .stay-productive-section .container {
+    flex-direction: row-reverse;
+  }
+
+  .stay-productive-section div {
+    flex: 0.55;
+  }
+
+  .stay-productive-section h2 {
+    margin-top: 1rem;
+  }
+
+  .stay-productive-section p {
+    width: 75%;
+  }
+
+  .stay-productive-section a {
+    margin: 1rem 0 0;
+  }
+
+  .stay-productive-section .image-container {
+    flex: 0.45;
+  }
+
   .stay-productive-section::after {
     background-image: url('/images/bg-curve-desktop.svg');
+  }
+
+  .testimonial {
+    margin: 2.75rem 0 0;
+    padding-block: 1.8rem;
+    padding-inline: 2.5rem 0;
+    width: 50%;
+  }
+
+  .quotes {
+    width: 1rem;
+  }
+
+  .testimonial p {
+      font-size: clamp(0.67rem, 3vw, 0.85rem);
+      margin-top: 0.6rem;
+      width: 90%;
+      line-height: 1.7;
+  }
+
+  .author-photo {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .author {
+
   }
 }
