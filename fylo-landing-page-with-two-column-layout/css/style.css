@@ -96,9 +96,13 @@ form {
   flex-direction: column;
  }
 
+input,
+button {
+  border-radius: 0.3em;
+}
+
 input {
   border: 1px solid var(--clr-primary-100);
-  border-radius: 0.2em;
   padding: 0.8em 1.5em;
   font-size: 0.8rem;
   font-family: var(--ff-heading);
@@ -111,7 +115,6 @@ input::placeholder {
 button {
   margin-top: 1rem;
   padding: 0.8em 1.5em;
-  border-radius: 0.2em;
   border: none;
   font-size: 0.8rem;
   background: var(--clr-accent-200);
