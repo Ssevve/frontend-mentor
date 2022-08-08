@@ -56,16 +56,12 @@ footer {
 }
 
 .section-heading--small {
-  font-size: clamp(1.15rem, 3vw, 1.5rem);
+  font-size: clamp(1.15rem, 3vw, 2rem);
   margin-bottom: 1rem;
 }
 
 .hero__heading {
   font-size: clamp(1.5rem, 3vw, 2.7rem);
-}
-
-.section-heading {
-
 }
 
 cite {
@@ -122,13 +118,13 @@ img {
 
 .form__input,
 .form__button {
-  padding-block: 0.5rem;
-  padding-inline: clamp(0.5rem, 3vw, 0.7rem);
+  border-radius: 0.2rem;
+  padding-block: 0.8rem;
+  padding-inline: 1.25rem;
 }
 
 .form__input {
   border: 1px solid var(--clr-primary-100);
-  padding: 0.8em 1.5em;
   font-size: 0.8rem;
   font-family: var(--ff-heading);
 }
@@ -139,7 +135,6 @@ img {
 
 .form__button {
   margin-top: 1rem;
-  padding: 0.8em 1.5em;
   border: 1px solid var(--clr-accent-200);
   font-size: 0.8rem;
   background: var(--clr-accent-200);
@@ -151,11 +146,12 @@ img {
 .form__input--thin,
 .form__button--thin {
   padding-block: 0.5rem;
-  padding-inline: clamp(0.5rem, 3vw, 0.7rem);
+  padding-inline: clamp(0.5rem, 5vw, 2rem);
   font-size: 0.7rem;
 }
 
 .form__input--thin {
+  max-width: 480px;
   margin-top: 0.1rem;
 }
 
@@ -165,6 +161,7 @@ img {
 
 .form__button--thin {
   margin-top: 0.5rem;
+  font-size: clamp(0.8rem, 3vw, 0.9rem);
 }
 
 .flex-center {
@@ -183,10 +180,8 @@ img {
 
 .text-block--thin {
   width: 85%;
-}
-
-.center-inline {
   margin-inline: auto;
+  font-size: clamp(0.85rem, 3vw, 1.1rem);
 }
 
 .sr-only {
@@ -469,9 +464,6 @@ img {
   .layout-group--big {
     flex: 0.55;
   }
-  /* .stay-productive div {
-    
-  } */
 
   .section-heading {
     margin-top: 1rem;
@@ -484,10 +476,6 @@ img {
   .highlighted-link {
     margin: 1rem 0 0;
   }
-
-  /* .stay-productive .image-container {
-    flex: 0.45;
-  } */
 
   .stay-productive::after {
     background-image: url('/images/bg-curve-desktop.svg');
@@ -505,14 +493,39 @@ img {
   }
 
   .testimonial__text {
-      font-size: clamp(0.67rem, 3vw, 0.85rem);
-      margin-top: 0.6rem;
-      width: 90%;
-      line-height: 1.7;
+    font-size: clamp(0.67rem, 3vw, 0.85rem);
+    margin-top: 0.6rem;
+    width: 90%;
+    line-height: 1.7;
   }
 
   .author-photo {
     width: 2rem;
     height: 2rem;
+  }
+
+  .early-access {
+    padding-block: 5.25rem;
+  }
+
+  .early-access .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .text-block--thin {
+    margin-left: 0;
+    flex: 0.3;
+    width: 72%;
+  }
+
+  .form__button--thin {
+    width: max-content;
+    margin-top: 1rem;
+  }
+
+  .form--small {
+    margin-top: 0;
+    flex: 0.7;
   }
 }
