@@ -292,7 +292,7 @@ img {
   left: 0;
 }
 
-.stay-productive a {
+.highlighted-link {
   width: max-content;
   margin: 2.2rem auto 0 auto;
   padding-bottom: 0.25rem;
@@ -301,7 +301,7 @@ img {
   border-bottom: 1px solid var(--clr-accent2-200);
 }
 
-.stay-productive a img {
+.highlighted-link img {
   margin-left: 0.4em;
 }
 
@@ -334,12 +334,13 @@ img {
 
 .author {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
 }
 
 .author__name {
   font-weight: bold;
-  margin: 1rem  0 0 0.5rem;
+  margin: 1rem 0 0 0.5rem;
   font-size: clamp(0.6rem, 2vw, 0.75rem);
 }
 
@@ -355,7 +356,6 @@ img {
   background: var(--clr-primary-100);
   color:hsl(0, 0%, 100%);
   padding-block: 1rem 4.5rem;
-  
 }
 
 /**
@@ -473,15 +473,15 @@ img {
     
   } */
 
-  .stay-productive h2 {
+  .section-heading {
     margin-top: 1rem;
   }
 
-  .stay-productive p {
+  .text-block {
     width: 75%;
   }
 
-  .stay-productive a {
+  .highlighted-link {
     margin: 1rem 0 0;
   }
 
@@ -504,7 +504,7 @@ img {
     width: 1rem;
   }
 
-  .testimonial p {
+  .testimonial__text {
       font-size: clamp(0.67rem, 3vw, 0.85rem);
       margin-top: 0.6rem;
       width: 90%;
@@ -514,9 +514,5 @@ img {
   .author-photo {
     width: 2rem;
     height: 2rem;
-  }
-
-  .author {
-
   }
 }
