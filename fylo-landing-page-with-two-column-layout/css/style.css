@@ -9,12 +9,12 @@
   --clr-accent2-100: hsl(177, 37%, 79%);
   --clr-accent2-200: hsl(170, 45%, 43%);
 
-  --clr-neutral-100: hsl(240,75%,98.4%);
+  --clr-neutral: hsl(240,75%,98.4%);
 
   --clr-light: hsl(0, 0%, 100%);
 
   --clr-error: hsl(343, 37%, 62%);
-  
+
   /* Fonts */
   --ff-heading: 'Raleway', sans-serif;
   --ff-body: 'Open Sans', sans-serif;
@@ -332,7 +332,7 @@ img {
   position: relative;
   margin-top: 3.7rem;
   padding-bottom: 5rem;
-  background: var(--clr-neutral-100);
+  background: var(--clr-neutral);
 }
 
 .stay-productive::after {
