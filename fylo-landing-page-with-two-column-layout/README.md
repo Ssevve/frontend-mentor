@@ -10,7 +10,6 @@ This is a solution to the [Fylo landing page with two column layout challenge on
 ## Optimizations
 
 - Use JavaScript to validate the user input
-- Use more reusable class names
 
 ## Lessons Learned:
 
